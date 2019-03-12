@@ -79,9 +79,26 @@
         </header>
         <!-- Authentification Buttons End Here -->
 
-      <!-- Beginning of Body -->
-      <h1>Unit 2 Project</h1>
+      <!-- Beginning of Journal Entry Fields -->
+      <p id="content-message"></p>
+      <div class="journal-entries">
 
+        <div id="entry-div" class="entry-resources">
+          <form id="create-entry-form">
+          <div class="form-group">
+            <label for="formGroupSignIn">Create Entry</label>
+            <input class="form-control overflow-hidden" name="entry[title]" type="text" placeholder="Enter Title Here">
+            <input class="form-control" name="entry[description]" type="text" placeholder="Enter Description Here">
+            <br>
+            <input type="submit" value="Create Entry">
+          </div>
+        </form>
+
+        <button id="get-entries">Get All Entries</button>
+      </div>
+    </div>
+
+    <!-- below is the closing div for the ID "page" -->
     </div>
     </body>
 </html>

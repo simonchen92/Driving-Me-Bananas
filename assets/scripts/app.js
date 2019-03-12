@@ -8,29 +8,5 @@ const authEvents = require('./auth/events.js')
 // require('./example')
 
 $(() => {
-  $('#sign-up-form').on('submit', authEvents.onSignUp)
-  $('#sign-in-form').on('submit', authEvents.onSignIn)
-  $('#change-password-form').on('submit', authEvents.onChangePassword)
-  $('#sign-out-btn').on('click', authEvents.onSignOut)
-})
-
-$('#sign-up-btn').on('click', function () {
-  $('#sign-up-form').fadeIn('slow')
-  $('#sign-in-form').fadeOut('slow')
-  $('#change-password-form').fadeOut('slow')
-  $('#user-message').show(500)
-})
-
-$('#sign-in-btn').on('click', function () {
-  $('#sign-in-form').fadeIn('slow')
-  $('#sign-up-form').fadeOut('slow')
-  $('#change-password-form').fadeOut('slow')
-  $('#user-message').show(500)
-})
-
-$('#change-password-btn').on('click', function () {
-  $('#change-password-form').fadeIn('slow')
-  $('#sign-up-form').fadeOut('slow')
-  $('#sign-in-form').fadeOut('slow')
-  $('#user-message').show(500)
+  authEvents.authHandler()
 })

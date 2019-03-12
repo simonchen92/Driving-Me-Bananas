@@ -45,9 +45,41 @@ const onSignOut = (event) => {
     .catch(ui.signOutFailure)
 }
 
+const authHandler = () => {
+  $('#sign-up-form').on('submit', onSignUp)
+  $('#sign-in-form').on('submit', onSignIn)
+  $('#change-password-form').on('submit', onChangePassword)
+  $('#sign-out-btn').on('click', onSignOut)
+}
+
+// button listeners
+
+$('#sign-up-btn').on('click', function () {
+  $('#sign-up-form').fadeIn('slow')
+  $('#sign-in-form').fadeOut('slow')
+  $('#change-password-form').fadeOut('slow')
+  $('#user-message').show(500)
+})
+
+$('#sign-in-btn').on('click', function () {
+  $('#sign-in-form').fadeIn('slow')
+  $('#sign-up-form').fadeOut('slow')
+  $('#change-password-form').fadeOut('slow')
+  $('#user-message').show(500)
+})
+
+$('#change-password-btn').on('click', function () {
+  $('#change-password-form').fadeIn('slow')
+  $('#sign-up-form').fadeOut('slow')
+  $('#sign-in-form').fadeOut('slow')
+  $('#user-message').show(500)
+})
+
+
 module.exports = {
   onSignUp,
   onSignIn,
   onChangePassword,
-  onSignOut
+  onSignOut,
+  authHandler
 }

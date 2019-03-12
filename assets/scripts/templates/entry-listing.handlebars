@@ -1,0 +1,22 @@
+{{#each entries as |entry|}}
+  {{log entry}}
+  <!-- {{> partial}}
+  Don't uncomment yet -->
+
+  <section data-id="{{entry.id}}" class="entry">
+    <h2>
+      <small>Title:</small> {{entry.title}}
+    </h2>
+    <p>
+      <small>Description:</small>
+      {{#if entry.description}}
+        {{entry.description}}
+      {{else}}
+        No description provided!
+      {{/if}}
+    </p>
+    <button class="btn btn-primary remove">Update</button>
+    <button class="btn btn-danger remove">Remove</button>
+  </section>
+
+{{/each}}
