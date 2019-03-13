@@ -63,31 +63,54 @@ $white: #fff;
 }
 
 input[type='text'] {
-  width: 30%;
+  // width: 30%;
 }
 input[type='date'] {
-  width: 30%;
+  // width: 30%;
 }
 
 textarea {
-  width: 30%;
+  // width: 30%;
   height: 200px;
 }
 
-#entry-resources {
+// #page {
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+// }
+
+.journal-entries {
   align-items: center;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  width: 100%;
+  padding: 10px 0;
+  margin: 10px;
 
-  #create-entry-form {
+  .create-entry-form {
     display: none;
     margin: 0 auto;
+  }
+
+  #clear-entries-btn {
+    margin: 10px auto;
   }
 
   .get-entries-form {
     display: none;
-    margin: 0 auto;
+    margin: 10px auto;
   }
+}
+
+.content {
+  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+
+  & > * {
+    border: 5px solid black;
+    padding: 10px 0;
+    margin: 10px 25%;
+  }
+
 }

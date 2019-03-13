@@ -81,19 +81,23 @@
 
       <!-- Beginning of Journal Entry Fields -->
       <p id="content-message"></p>
-      <div class="journal-entries">
 
+      <div class="journal-entries">
         <div id="entry-div" class="entry-resources">
           <form id="create-entry-form">
           <div class="form-group">
             <label for="formGroupSignIn">Create Entry</label>
+            <input required class="form-control overflow-hidden" name="entry[date]" type="date" placeholder="Select Date">
             <input class="form-control overflow-hidden" name="entry[title]" type="text" placeholder="Enter Title Here">
-            <input class="form-control overflow-hidden" name="entry[date]" type="date" placeholder="Select Date">
             <textarea name="entry[description]" type="text" placeholder="Enter Description Here"></textarea>
             <br>
             <input class="create-entry-button" type="submit" value="Create Entry">
           </div>
           </form>
+
+          <div id="clear-entries-btn">
+          <button id="clear-entries" class="btn-clear-entry">Clear Entries</button>
+          </div>
 
           <form id="get-entries-form">
             <input class="get-entries" type="submit" value="Get All Entries">
@@ -103,6 +107,7 @@
 
     <div id="content" class="content"></div>
 
+    </div>
     <!-- below is the closing div for the ID "page" -->
     </div>
     </body>

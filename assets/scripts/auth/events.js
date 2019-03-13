@@ -77,6 +77,13 @@ $('#change-password-btn').on('click', function () {
   $('#user-message').show(500)
 })
 
+// $('.journal-entries').on('click', function () {
+//   $('#sign-up-form').fadeOut('slow')
+//   $('#sign-in-form').fadeOut('slow')
+//   $('#change-password-form').fadeOut('slow')
+//   $('#user-message').show(500)
+// })
+
 module.exports = {
   onSignUp,
   onSignIn,

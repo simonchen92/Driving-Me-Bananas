@@ -41,6 +41,7 @@ const onUpdateEntry = (event) => {
 
   api.updateEntry(formData)
     .then(ui.onUpdateEntrySuccess)
+    .then(() => onGetEntries(event))
     .catch(ui.failure)
 }
 
@@ -53,6 +54,12 @@ const onDeleteEntry = (event) => {
     .catch(ui.failure)
 }
 
+const onClearEntries = () => {
+  console.log('on Clear Entries is a success!!!')
+  event.preventDefault()
+  ui.clearEntries()
+}
+
 // entries event listeners
 
 const entryHandler = () => {
@@ -60,12 +67,13 @@ const entryHandler = () => {
   $('#get-entries-form').on('submit', onGetEntries)
   $('.content').on('click', '.delete', onDeleteEntry)
   $('.content').on('submit', '.update-form', onUpdateEntry)
+  $('#clear-entries-btn').on('click', onClearEntries)
 }
 
 module.exports = {
   onCreateEntry,
   onGetEntries,
   onUpdateEntry,
-  onDeleteEntry,
+  onClearEntries,
   entryHandler
 }

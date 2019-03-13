@@ -1,13 +1,14 @@
 {{#each entries as |entry|}}
   {{log entry}}
 
-  <section data-id="{{entry.id}}" class="entry">
-    <h2>
-      <small>Title:</small> {{entry.title}}
-    </h2>
-    <h2>
+  <section id="entry-{{entry.id}}" data-id="{{entry.id}}" class="entry">
+    <h6>
       <small>Date:</small> {{entry.date}}
-    </h2>
+    </h6>
+    <h6>
+      <small>Title:</small> {{entry.title}}
+    </h6>
+
     <p>
       <small>Description:</small>
       {{#if entry.description}}
@@ -17,14 +18,14 @@
       {{/if}}
     </p>
 
-    <form class="update-form">
+    <form class="update-form d-flex flex-column justify-content-center">
       <input type="number" name="entry[id]" class="d-none" value="{{entry.id}}">
-      <input class="form-control overflow-hidden" name="entry[title]" type="text" placeholder="Enter New Title">
-      <input class="form-control overflow-hidden" name="entry[description]" type="text" placeholder="Update Description">
+      <input class="form-control overflow-hidden align-self-center d-flex w-100 my-2" name="entry[title]" type="text" placeholder="Enter New Title">
+      <textarea class="form-control overflow-hidden align-self-center d-flex w-100 my-2" name="entry[description]" type="text" placeholder="Update Description"></textarea>
       <input type="submit"class="btn btn-primary update" value="Update">
     </form>
 
-    <button class="btn btn-danger delete">Delete</button
+    <button class="btn btn-danger delete align-self-center w-100 my-2">Delete</button>
 
   </section>
 

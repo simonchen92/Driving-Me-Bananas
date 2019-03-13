@@ -39,7 +39,7 @@ const signInSucess = (responseData) => {
   $('#sign-out-btn').show()
   $('#sign-up-btn').hide()
   $('#sign-in-btn').hide()
-  // $('.container').hide()
+  $('.journal-entries').show()
 }
 
 const signInFailure = () => {
@@ -54,7 +54,8 @@ const changePasswordSuccess = () => {
   $('#alert-message').removeClass('error-message')
   $('#change-password-form').trigger('reset')
   setTimeout(() => $('#alert-message').text(''), 2000)
-  $('.box').empty()
+  $('#content').empty()
+  $('#create-entry-form').trigger('reset')
 }
 
 const changePasswordFailure = () => {
@@ -77,11 +78,13 @@ const signOutSuccess = () => {
   $('#sign-up-form').fadeOut('slow')
   $('#sign-in-form').fadeOut('slow')
   $('#change-password-form').fadeOut('slow')
+  $('#user-message').empty()
+  $('#content-message').empty()
+  $('#content').empty()
+  $('.journal-entries').hide()
   // show buttons
   $('#sign-up-btn').show()
   $('#sign-in-btn').show()
-  // $('.container').hide()
-  $('#user-message').empty()
   setTimeout(() => $('#user-message').fadeOut().empty())
 }
 
