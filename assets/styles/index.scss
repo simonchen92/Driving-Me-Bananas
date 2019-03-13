@@ -52,3 +52,42 @@ $white: #fff;
   justify-content: center;
   margin-top: 30px;
 }
+
+#content-message {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  justify-content: center;
+  margin: 10px;
+}
+
+input[type='text'] {
+  width: 30%;
+}
+input[type='date'] {
+  width: 30%;
+}
+
+textarea {
+  width: 30%;
+  height: 200px;
+}
+
+#entry-resources {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+
+  #create-entry-form {
+    display: none;
+    margin: 0 auto;
+  }
+
+  .get-entries-form {
+    display: none;
+    margin: 0 auto;
+  }
+}

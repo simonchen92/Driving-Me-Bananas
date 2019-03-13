@@ -88,15 +88,20 @@
           <div class="form-group">
             <label for="formGroupSignIn">Create Entry</label>
             <input class="form-control overflow-hidden" name="entry[title]" type="text" placeholder="Enter Title Here">
-            <input class="form-control" name="entry[description]" type="text" placeholder="Enter Description Here">
+            <input class="form-control overflow-hidden" name="entry[date]" type="date" placeholder="Select Date">
+            <textarea name="entry[description]" type="text" placeholder="Enter Description Here"></textarea>
             <br>
-            <input type="submit" value="Create Entry">
+            <input class="create-entry-button" type="submit" value="Create Entry">
           </div>
-        </form>
+          </form>
 
-        <button id="get-entries">Get All Entries</button>
+          <form id="get-entries-form">
+            <input class="get-entries" type="submit" value="Get All Entries">
+          </form>
       </div>
     </div>
+
+    <div id="content" class="content"></div>
 
     <!-- below is the closing div for the ID "page" -->
     </div>

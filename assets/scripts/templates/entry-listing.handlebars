@@ -1,11 +1,12 @@
 {{#each entries as |entry|}}
   {{log entry}}
-  <!-- {{> partial}}
-  Don't uncomment yet -->
 
   <section data-id="{{entry.id}}" class="entry">
     <h2>
       <small>Title:</small> {{entry.title}}
+    </h2>
+    <h2>
+      <small>Date:</small> {{entry.date}}
     </h2>
     <p>
       <small>Description:</small>
@@ -15,8 +16,16 @@
         No description provided!
       {{/if}}
     </p>
-    <button class="btn btn-primary remove">Update</button>
-    <button class="btn btn-danger remove">Remove</button>
+
+    <form class="update-form">
+      <input type="number" name="entry[id]" class="d-none" value="{{entry.id}}">
+      <input class="form-control overflow-hidden" name="entry[title]" type="text" placeholder="Enter New Title">
+      <input class="form-control overflow-hidden" name="entry[description]" type="text" placeholder="Update Description">
+      <input type="submit"class="btn btn-primary update" value="Update">
+    </form>
+
+    <button class="btn btn-danger delete">Delete</button
+
   </section>
 
 {{/each}}

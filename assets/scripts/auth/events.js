@@ -45,6 +45,8 @@ const onSignOut = (event) => {
     .catch(ui.signOutFailure)
 }
 
+// event handler for on click
+
 const authHandler = () => {
   $('#sign-up-form').on('submit', onSignUp)
   $('#sign-in-form').on('submit', onSignIn)
@@ -74,7 +76,6 @@ $('#change-password-btn').on('click', function () {
   $('#sign-in-form').fadeOut('slow')
   $('#user-message').show(500)
 })
-
 
 module.exports = {
   onSignUp,
