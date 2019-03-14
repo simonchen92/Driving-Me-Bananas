@@ -37,6 +37,7 @@ const onUpdateEntrySuccess = responseData => {
 
 const clearEntries = () => {
   $('#content').empty()
+  $('#create-entry-form').trigger('reset')
 }
 
 const failure = () => {

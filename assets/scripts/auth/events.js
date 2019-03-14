@@ -25,6 +25,16 @@ const onSignIn = (event) => {
     .catch(ui.signInFailure)
 }
 
+const onSignInToggle = (event) => {
+  console.log('sign in toggle works')
+  ui.signInToggle()
+}
+
+const onSignUpToggle = (event) => {
+  console.log('sign up toggle works')
+  ui.signUpToggle()
+}
+
 const onChangePassword = (event) => {
   console.log('on Change Password success')
   event.preventDefault()
@@ -52,6 +62,8 @@ const authHandler = () => {
   $('#sign-in-form').on('submit', onSignIn)
   $('#change-password-form').on('submit', onChangePassword)
   $('#sign-out-btn').on('click', onSignOut)
+  $('#sign-in-toggle').on('click', onSignInToggle)
+  $('#sign-up-toggle').on('click', onSignUpToggle)
 }
 
 // button listeners

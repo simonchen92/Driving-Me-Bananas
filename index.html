@@ -3,7 +3,7 @@
     <head>
       <title>Epic-Logs</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
-
+      <link href="https://fonts.googleapis.com/css?family=Reenie+Beanie" rel="stylesheet">
       <!-- Do not add `link` tags-->
       <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 
@@ -16,7 +16,7 @@
       <!-- Navbar -->
 
       <nav class="navbar navbar-dark bg-dark" id="navbar">
-        <a class="navbar-brand">World of Thinking</a>
+        <a class="navbar-brand">Driving Me Bananas</a>
         <form>
           <button id="sign-up-btn" type="button" class="btn btn-secondary">Sign Up</button>
           <button id="sign-in-btn" type="button" class="btn btn-secondary">Sign In</button>
@@ -31,8 +31,9 @@
           <p id="user-message"></p>
 
           <div class="auth-forms" id="auth-forms">
-
-            <form id="sign-up-form">
+            <!-- <div class="user experience">
+            Was going to create sign up/in toggle feature -->
+            <form id="sign-up-form" style="display: none;">
               <div class="form-group">
                 <label for="formGroupSignIn">Create Your Account</label>
                 <input class="form-control" name="credentials[email]" type="email" placeholder="Email">
@@ -40,18 +41,25 @@
                 <input class="form-control" name="credentials[password_confirmation]" type="password" placeholder="Password Confirm">
                 <br>
                 <input id="button" type="submit" value="Sign Up">
+                <!-- <p>Already have a sign in?</p>
+                <span id="sign-in-toggle" class="sign-in-toggle">Sign In</span>
+                Part of the toggle sign in/up feature -->
               </div>
             </form>
 
-            <form id="sign-in-form">
+            <form id="sign-in-form" style="display: none;">
               <div class="form-group">
                 <label for="formGroupSignIn">Sign In Credentials</label>
                 <input class="form-control overflow-hidden" name="credentials[email]" type="email" placeholder="Email">
                 <input class="form-control" name="credentials[password]" type="password" placeholder="Password">
                 <br>
                 <input id="button1" type="submit" value="Sign In">
+                <!-- <p>Don't have a sign in?</p>
+                <span id="sign-up-toggle" class="sign-up-toggle">Sign Up</span>
+                part of the toggle feature for signing up/in -->
               </div>
             </form>
+          <!-- </div> -->
 
             <!-- Change Password Modal -->
             <div class="modal fade" id="changePasswordModal" tabindex="-1" role="dialog" aria-labelledby="changePasswordModal" aria-hidden="true">
@@ -83,7 +91,7 @@
       <p id="content-message"></p>
 
       <div class="journal-entries">
-        <div id="entry-div" class="entry-resources">
+        <div id="entry-div" class="entry-resources text-center">
           <form id="create-entry-form">
           <div class="form-group">
             <label for="formGroupSignIn">Create Entry</label>
@@ -105,9 +113,10 @@
       </div>
     </div>
 
-    <div id="content" class="content"></div>
+    <!-- <div class="row"> -->
+    <div id="content" class="row flex-wrap flex-row justify-content-around"></div>
+    <!-- </div> -->
 
-    </div>
     <!-- below is the closing div for the ID "page" -->
     </div>
     </body>

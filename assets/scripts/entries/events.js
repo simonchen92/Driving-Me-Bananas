@@ -14,11 +14,6 @@ const onCreateEntry = (event) => {
 
   api.createEntry(formData)
     .then(ui.onCreateEntrySuccess)
-    // .then(() => {
-    //   api.getEntries({user_id: store.user.id})
-    //     .then(ui.onGetEntriesSuccess)
-    //     .catch(ui.failure)
-    // })
     .catch(ui.failure)
 }
 
@@ -65,8 +60,8 @@ const onClearEntries = () => {
 const entryHandler = () => {
   $('#create-entry-form').on('submit', onCreateEntry)
   $('#get-entries-form').on('submit', onGetEntries)
-  $('.content').on('click', '.delete', onDeleteEntry)
-  $('.content').on('submit', '.update-form', onUpdateEntry)
+  $('#content').on('click', '.delete', onDeleteEntry)
+  $('#content').on('submit', '.update-form', onUpdateEntry)
   $('#clear-entries-btn').on('click', onClearEntries)
 }
 

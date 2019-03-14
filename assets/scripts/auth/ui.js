@@ -42,6 +42,18 @@ const signInSucess = (responseData) => {
   $('.journal-entries').show()
 }
 
+// Toggle feature for signing in/up
+
+// const signInToggle = () => {
+//   $('#sign-up-form').hide()
+//   $('#sign-in-form').fadeIn(500)
+// }
+//
+// const signUpToggle = () => {
+//   $('#sign-in-form').hide()
+//   $('#sign-up-form').fadeIn(500)
+// }
+
 const signInFailure = () => {
   $('#user-message').text('Sign In Failure. Please Try Again')
   $('#sign-in-form').trigger('reset')
@@ -104,5 +116,7 @@ module.exports = {
   changePasswordSuccess,
   changePasswordFailure,
   signOutSuccess,
+  // signInToggle,
+  // signUpToggle,
   signOutFailure
 }
