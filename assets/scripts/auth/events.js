@@ -25,15 +25,16 @@ const onSignIn = (event) => {
     .catch(ui.signInFailure)
 }
 
-const onSignInToggle = (event) => {
-  console.log('sign in toggle works')
-  ui.signInToggle()
-}
-
-const onSignUpToggle = (event) => {
-  console.log('sign up toggle works')
-  ui.signUpToggle()
-}
+// Toggle button for sign in/up - for use for future iterations
+// const onSignInToggle = (event) => {
+//   console.log('sign in toggle works')
+//   ui.signInToggle()
+// }
+//
+// const onSignUpToggle = (event) => {
+//   console.log('sign up toggle works')
+//   ui.signUpToggle()
+// }
 
 const onChangePassword = (event) => {
   console.log('on Change Password success')
@@ -62,8 +63,9 @@ const authHandler = () => {
   $('#sign-in-form').on('submit', onSignIn)
   $('#change-password-form').on('submit', onChangePassword)
   $('#sign-out-btn').on('click', onSignOut)
-  $('#sign-in-toggle').on('click', onSignInToggle)
-  $('#sign-up-toggle').on('click', onSignUpToggle)
+  // below are button toggle for auth for future iterations
+  // $('#sign-in-toggle').on('click', onSignInToggle)
+  // $('#sign-up-toggle').on('click', onSignUpToggle)
 }
 
 // button listeners
@@ -88,13 +90,6 @@ $('#change-password-btn').on('click', function () {
   $('#sign-in-form').fadeOut('slow')
   $('#user-message').show(500)
 })
-
-// $('.journal-entries').on('click', function () {
-//   $('#sign-up-form').fadeOut('slow')
-//   $('#sign-in-form').fadeOut('slow')
-//   $('#change-password-form').fadeOut('slow')
-//   $('#user-message').show(500)
-// })
 
 module.exports = {
   onSignUp,

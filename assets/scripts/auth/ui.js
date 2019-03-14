@@ -29,6 +29,7 @@ const signInSucess = (responseData) => {
   // console.log(store.user)
   $('#sign-in-form').trigger('reset')
   setTimeout(() => $('#user-message').text(''), 2000)
+  $('#change-password-form').trigger('reset')
   $('#change-password-form').removeClass('hidden')
   $('#sign-out-form').removeClass('hidden')
   $('#sign-up-form').addClass('hidden')
@@ -82,6 +83,7 @@ const signOutSuccess = () => {
   $('#user-message').removeClass('error-message')
   store.user = null
   setTimeout(() => $('#user-message').text(''), 2000)
+  $('#change-password-forms').trigger('reset')
   $('#change-password-forms').addClass('hidden')
   $('#sign-out-btn').hide()
   $('#change-password-btn').hide()

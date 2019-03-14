@@ -11,14 +11,9 @@ const onCreateEntrySuccess = (responseData) => {
   $('#content-message').removeClass('error-message')
   $('#create-entry-form').trigger('reset')
   $('#content').hide()
+  $('#change-password-form').trigger('reset')
   // below function clears the successful content message
   setTimeout(() => $('#content-message').text(''), 2000)
-
-  // ---- use the below jQuery if needed -----
-  // below function empty all elements it is being called on
-  // $('.box').empty()
-  // $('.container').show()
-  // $('.box').height($('.box').width())
 }
 
 const onGetEntriesSuccess = (responseData) => {
@@ -38,6 +33,7 @@ const onUpdateEntrySuccess = responseData => {
 const clearEntries = () => {
   $('#content').empty()
   $('#create-entry-form').trigger('reset')
+  $('#change-password-form').trigger('reset')
 }
 
 const failure = () => {
