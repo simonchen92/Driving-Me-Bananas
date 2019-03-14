@@ -3,7 +3,7 @@ const config = require('../config.js')
 const store = require('../store.js')
 
 const createEntry = (formData) => {
-  // console.log('createGame was successful')
+  // // console.log('createGame was successful')
   return $.ajax({
     method: 'POST',
     url: config.apiUrl + '/entries',
@@ -16,7 +16,7 @@ const createEntry = (formData) => {
 }
 
 const getEntries = (formData) => {
-  // console.log('getGames was succesful')
+  // // console.log('getGames was succesful')
   return $.ajax({
     method: 'GET',
     url: config.apiUrl + '/entries',
@@ -29,10 +29,10 @@ const getEntries = (formData) => {
 }
 
 const updateEntry = (formData) => {
-  console.log('update Entry AJAX request was succesful')
+  // console.log('update Entry AJAX request was succesful')
   const entry = formData.entry
-  // console.log("entry")
-  // console.log(entry)
+  // // console.log("entry")
+  // // console.log(entry)
   const id = formData.entry.id
   return $.ajax({
     method: 'PATCH',
@@ -48,7 +48,7 @@ const updateEntry = (formData) => {
 }
 
 const deleteEntry = (id) => {
-  // console.log('getGames was succesful')
+  // // console.log('getGames was succesful')
   return $.ajax({
     method: 'DELETE',
     url: config.apiUrl + `/entries/${id}`,

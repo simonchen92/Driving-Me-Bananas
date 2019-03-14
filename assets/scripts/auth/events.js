@@ -4,7 +4,7 @@ const api = require('./api.js')
 const ui = require('./ui.js')
 
 const onSignUp = (event) => {
-  console.log('on SignUp Succes')
+  // console.log('on SignUp Succes')
   event.preventDefault()
   const form = event.target
   const formData = getFormFields(form)
@@ -15,7 +15,7 @@ const onSignUp = (event) => {
 }
 
 const onSignIn = (event) => {
-  console.log('on Sign In Success')
+  // console.log('on Sign In Success')
   event.preventDefault()
   const form = event.target
   const formData = getFormFields(form)
@@ -27,17 +27,17 @@ const onSignIn = (event) => {
 
 // Toggle button for sign in/up - for use for future iterations
 // const onSignInToggle = (event) => {
-//   console.log('sign in toggle works')
+//   // console.log('sign in toggle works')
 //   ui.signInToggle()
 // }
 //
 // const onSignUpToggle = (event) => {
-//   console.log('sign up toggle works')
+//   // console.log('sign up toggle works')
 //   ui.signUpToggle()
 // }
 
 const onChangePassword = (event) => {
-  console.log('on Change Password success')
+  // console.log('on Change Password success')
   event.preventDefault()
   const form = event.target
   const formData = getFormFields(form)
@@ -48,7 +48,7 @@ const onChangePassword = (event) => {
 }
 
 const onSignOut = (event) => {
-  console.log('on Sign Out Success')
+  // console.log('on Sign Out Success')
   event.preventDefault()
 
   api.signOut()

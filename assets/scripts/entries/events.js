@@ -5,11 +5,11 @@ const ui = require('./ui.js')
 const store = require('../store.js')
 
 const onCreateEntry = (event) => {
-  console.log('on Create Entry is a Success')
+  // console.log('on Create Entry is a Success')
   event.preventDefault()
   const form = event.target
   const formData = getFormFields(form)
-  console.log(formData)
+  // console.log(formData)
   // formData.entry.user_id = store.user.id
 
   api.createEntry(formData)
@@ -18,7 +18,7 @@ const onCreateEntry = (event) => {
 }
 
 const onGetEntries = (event) => {
-  console.log('on Get Entries Success')
+  // console.log('on Get Entries Success')
   event.preventDefault()
 
   api.getEntries({user_id: store.user.id})
@@ -27,12 +27,12 @@ const onGetEntries = (event) => {
 }
 
 const onUpdateEntry = (event) => {
-  console.log('on Update Entry Success')
+  // console.log('on Update Entry Success')
   event.preventDefault()
   const form = event.target
   const formData = getFormFields(form)
-  // console.log("formdata")
-  // console.log(formData)
+  // // console.log("formdata")
+  // // console.log(formData)
 
   api.updateEntry(formData)
     .then(ui.onUpdateEntrySuccess)
@@ -41,7 +41,7 @@ const onUpdateEntry = (event) => {
 }
 
 const onDeleteEntry = (event) => {
-  console.log('on Delete Entry is a success')
+  // console.log('on Delete Entry is a success')
   const entryId = $(event.target).closest('section').data('id')
   event.preventDefault()
   api.deleteEntry(entryId)
@@ -50,7 +50,7 @@ const onDeleteEntry = (event) => {
 }
 
 const onClearEntries = () => {
-  console.log('on Clear Entries is a success!!!')
+  // console.log('on Clear Entries is a success!!!')
   event.preventDefault()
   ui.clearEntries()
 }
