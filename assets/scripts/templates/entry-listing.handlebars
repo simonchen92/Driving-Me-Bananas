@@ -6,13 +6,16 @@
     <section id="entry-{{entry.id}}" data-id="{{entry.id}}" class="entry-item bg-dark entry m-5 p-3 text-light">
     <h4>
       <small>Date:</small> {{entry.date}}
-    </hh4>
-    <h4>
-      <small>Title:</small> {{entry.title}}
     </h4>
+    <div class="entry-title small d-flex">
+      <h4 class="mr-2">Title: </h4>
+      <h4>{{entry.title}}</h4>
 
-    <p>
-      <small>Description:</small>
+
+      </div>
+
+    <p class="entry-description">
+      <small >Description:</small>
       {{#if entry.description}}
         {{entry.description}}
       {{else}}

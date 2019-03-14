@@ -140,8 +140,20 @@ p {
 
 .entry-item {
   width: 300px;
-
+  height: 600px;
 }
+
+.entry-description {
+  height: 200px;
+  max-height: 200px;
+  overflow: auto;
+}
+
+.entry-title {
+  overflow-x: auto;
+  max-height: 28px;
+}
+
 
 
 // .content {
