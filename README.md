@@ -1,5 +1,17 @@
 # Driving Me Bananas
 
+## Links to Front End and Back End
+
+Back End Repo - https://github.com/simonchen92/Driving-Me-Bananas-Back-End
+
+Back End Deployed - https://simon-full-stack-project.herokuapp.com/
+
+Front End Repo - https://github.com/simonchen92/Driving-Me-Bananas
+
+Front End Deployed - https://simonchen92.github.io/Driving-Me-Bananas/
+
+My project is an application that creates and stores the list of journal entries created by the user. The user may update and delete their entries if they wish.
+
 ## List of Technologies Used
 
 * HTML
@@ -24,7 +36,6 @@
 ## Wireframe
 
 ![image](https://media.git.generalassemb.ly/user/18685/files/55757f80-4681-11e9-9fa3-7cf4f9fd3c22)
-
 
 ## Planning and Development
 
