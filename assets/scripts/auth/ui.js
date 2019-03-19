@@ -10,8 +10,8 @@ const signUpSucess = () => {
   $('#sign-up-form').trigger('reset')
   setTimeout(() => $('#user-message').text(''), 2000)
   $('#change-password-form').removeClass('hidden')
-  $('#sign-up-form').addClass('hidden')
-  $('#sign-up-form').fadeOut('slow')
+  // $('#sign-up-form').addClass('hidden')
+  // $('#sign-up-form').fadeOut('slow')
 }
 
 const signUpFailure = () => {
@@ -26,7 +26,7 @@ const signInSucess = (responseData) => {
   $('#user-message').removeClass('error-message')
   // save/store token ID
   store.user = responseData.user
-  // // console.log(store.user)
+  // console.log(store.user)
   $('#sign-in-form').trigger('reset')
   setTimeout(() => $('#user-message').text(''), 2000)
   $('#change-password-form').trigger('reset')
@@ -38,22 +38,20 @@ const signInSucess = (responseData) => {
   $('#sign-in-form').fadeOut('slow')
   $('#change-password-btn').show()
   $('#sign-out-btn').show()
-  $('#sign-up-btn').hide()
-  $('#sign-in-btn').hide()
   $('.journal-entries').show()
 }
 
 // Toggle feature for signing in/up
 
-// const signInToggle = () => {
-//   $('#sign-up-form').hide()
-//   $('#sign-in-form').fadeIn(500)
-// }
-//
-// const signUpToggle = () => {
-//   $('#sign-in-form').hide()
-//   $('#sign-up-form').fadeIn(500)
-// }
+const signInToggle = () => {
+  $('#sign-up-form').hide()
+  $('#sign-in-form').fadeIn(500)
+}
+
+const signUpToggle = () => {
+  $('#sign-in-form').hide()
+  $('#sign-up-form').fadeIn(500)
+}
 
 const signInFailure = () => {
   $('#user-message').text('Sign In Failure. Please Try Again')
@@ -96,9 +94,10 @@ const signOutSuccess = () => {
   $('#content-message').empty()
   $('#content').empty()
   $('.journal-entries').hide()
-  // show buttons
-  $('#sign-up-btn').show()
-  $('#sign-in-btn').show()
+  $('#clear-entries').show()
+  $('#get-entries').show()
+  // show form
+  $('#sign-in-form').show()
   setTimeout(() => $('#user-message').fadeOut().empty())
 }
 
@@ -118,7 +117,7 @@ module.exports = {
   changePasswordSuccess,
   changePasswordFailure,
   signOutSuccess,
-  // signInToggle,
-  // signUpToggle,
+  signInToggle,
+  signUpToggle,
   signOutFailure
 }

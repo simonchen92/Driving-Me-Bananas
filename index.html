@@ -18,8 +18,9 @@
       <nav class="navbar navbar-dark bg-dark" id="navbar">
         <a class="navbar-brand">Driving Me Bananas</a>
         <form>
-          <button id="sign-up-btn" type="button" class="btn btn-secondary">Sign Up</button>
-          <button id="sign-in-btn" type="button" class="btn btn-secondary">Sign In</button>
+          <!-- Replace the sign up/in buttons below with toggle form function -->
+          <!-- <button id="sign-up-btn" type="button" class="btn btn-secondary">Sign Up</button>
+          <button id="sign-in-btn" type="button" class="btn btn-secondary">Sign In</button> -->
           <button id="change-password-btn" type="button" class="btn btn-secondary" data-toggle="modal" data-target="#changePasswordModal">Change Password</button>
           <button id="sign-out-btn" type="button" class="btn btn-secondary">Sign Out</button>
         </form>
@@ -30,9 +31,8 @@
         <header>
           <p id="user-message"></p>
 
+          <div class="user experience">
           <div class="auth-forms" id="auth-forms">
-            <!-- <div class="user experience">
-            Was going to create sign up/in toggle feature -->
             <form id="sign-up-form" style="display: none;">
               <div class="form-group">
                 <label for="formGroupSignIn">Create Your Account</label>
@@ -41,9 +41,7 @@
                 <input class="form-control" name="credentials[password_confirmation]" type="password" placeholder="Password Confirm">
                 <br>
                 <input id="button" type="submit" value="Sign Up">
-                <!-- <p>Already have a sign in?</p>
-                <span id="sign-in-toggle" class="sign-in-toggle">Sign In</span>
-                Part of the toggle sign in/up feature -->
+                <p>Already have an account?<span id="sign-in-toggle" class="sign-in-toggle"> Sign In</span></p>
               </div>
             </form>
 
@@ -54,12 +52,10 @@
                 <input class="form-control" name="credentials[password]" type="password" placeholder="Password">
                 <br>
                 <input id="button1" type="submit" value="Sign In">
-                <!-- <p>Don't have a sign in?</p>
-                <span id="sign-up-toggle" class="sign-up-toggle">Sign Up</span>
-                part of the toggle feature for signing up/in -->
+                <p>Don't have an account?<span id="sign-up-toggle" class="sign-up-toggle"> Sign Up</span></p>
               </div>
             </form>
-          <!-- </div> -->
+          </div>
 
             <!-- Change Password Modal -->
             <div class="modal fade" id="changePasswordModal" tabindex="-1" role="dialog" aria-labelledby="changePasswordModal" aria-hidden="true">
@@ -108,14 +104,12 @@
           </div>
 
           <form id="get-entries-form">
-            <input class="get-entries" type="submit" value="Get All Entries">
+            <input id="get-entries" class="get-entries" type="submit" value="Get All Entries">
           </form>
       </div>
     </div>
 
-    <!-- <div class="row"> -->
     <div id="content" class="row flex-wrap flex-row justify-content-around"></div>
-    <!-- </div> -->
 
     <!-- below is the closing div for the ID "page" -->
     </div>

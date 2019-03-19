@@ -1,5 +1,6 @@
 @import '~bootstrap/scss/bootstrap';
 $white: #fff;
+$blue: #0000FF;
 
 body {
   background-image: url('./public/bananas.png');
@@ -27,6 +28,11 @@ body {
     display: none;
     margin: 5px;
   }
+}
+
+span:hover {
+  color: $blue;
+  cursor: pointer;
 }
 
 #change-password-btn {

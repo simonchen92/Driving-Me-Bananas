@@ -11,5 +11,6 @@ const entryEvents = require('./entries/events.js')
 $(() => {
   authEvents.authHandler()
   entryEvents.entryHandler()
+  $('#sign-in-form').show()
   $('.journal-entries').hide()
 })

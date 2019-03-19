@@ -2,6 +2,7 @@
 const getFormFields = require('../../../lib/get-form-fields.js')
 const api = require('./api.js')
 const ui = require('./ui.js')
+const entryEvents = require('../entries/events')
 
 const onSignUp = (event) => {
   // console.log('on SignUp Succes')
@@ -22,19 +23,22 @@ const onSignIn = (event) => {
 
   api.signIn(formData)
     .then(ui.signInSucess)
+    // get all existing entries on sign in
+    .then(() => { entryEvents.onGetEntries() })
     .catch(ui.signInFailure)
 }
 
-// Toggle button for sign in/up - for use for future iterations
-// const onSignInToggle = (event) => {
-//   // console.log('sign in toggle works')
-//   ui.signInToggle()
-// }
-//
-// const onSignUpToggle = (event) => {
-//   // console.log('sign up toggle works')
-//   ui.signUpToggle()
-// }
+// Toggle buttons for sign in/up
+
+const onSignInToggle = (event) => {
+  // console.log('sign in toggle works')
+  ui.signInToggle()
+}
+
+const onSignUpToggle = (event) => {
+  // console.log('sign up toggle works')
+  ui.signUpToggle()
+}
 
 const onChangePassword = (event) => {
   // console.log('on Change Password success')
@@ -64,30 +68,30 @@ const authHandler = () => {
   $('#change-password-form').on('submit', onChangePassword)
   $('#sign-out-btn').on('click', onSignOut)
   // below are button toggle for auth for future iterations
-  // $('#sign-in-toggle').on('click', onSignInToggle)
-  // $('#sign-up-toggle').on('click', onSignUpToggle)
+  $('#sign-in-toggle').on('click', onSignInToggle)
+  $('#sign-up-toggle').on('click', onSignUpToggle)
 }
 
-// button listeners
+// sign up/in button listeners
 
-$('#sign-up-btn').on('click', function () {
-  $('#sign-up-form').fadeIn('slow')
-  $('#sign-in-form').fadeOut('slow')
-  $('#change-password-form').fadeOut('slow')
-  $('#user-message').show(500)
-})
+// $('#sign-up-btn').on('click', function () {
+//   $('#sign-up-form').fadeIn('slow')
+//   $('#sign-in-form').fadeOut('slow')
+//   $('#change-password-form').fadeOut('slow')
+//   $('#user-message').show(500)
+// })
 
-$('#sign-in-btn').on('click', function () {
-  $('#sign-in-form').fadeIn('slow')
-  $('#sign-up-form').fadeOut('slow')
-  $('#change-password-form').fadeOut('slow')
-  $('#user-message').show(500)
-})
+// $('#sign-in-btn').on('click', function () {
+//   $('#sign-in-form').fadeIn('slow')
+//   $('#sign-up-form').fadeOut('slow')
+//   $('#change-password-form').fadeOut('slow')
+//   $('#user-message').show(500)
+// })
 
 $('#change-password-btn').on('click', function () {
   $('#change-password-form').fadeIn('slow')
-  $('#sign-up-form').fadeOut('slow')
-  $('#sign-in-form').fadeOut('slow')
+  // $('#sign-up-form').fadeOut('slow')
+  // $('#sign-in-form').fadeOut('slow')
   $('#user-message').show(500)
 })
 

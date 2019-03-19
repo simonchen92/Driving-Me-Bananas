@@ -17,12 +17,22 @@ const onCreateEntry = (event) => {
     .catch(ui.failure)
 }
 
-const onGetEntries = (event) => {
+const onGetEntries = () => {
   // console.log('on Get Entries Success')
-  event.preventDefault()
+  if (event) { event.preventDefault() }
 
   api.getEntries({user_id: store.user.id})
     .then(ui.onGetEntriesSuccess)
+    .then(() => {
+      if (store.user.entries.length) {
+        $('#clear-entries').show()
+        $('#get-entries').show()
+      } else {
+        $('#clear-entries').hide()
+        $('#get-entries').hide()
+      }
+    }
+    )
     .catch(ui.failure)
 }
 
@@ -49,10 +59,15 @@ const onDeleteEntry = (event) => {
     .catch(ui.failure)
 }
 
-const onClearEntries = () => {
-  // console.log('on Clear Entries is a success!!!')
+const onClearEntries = (event) => {
   event.preventDefault()
   ui.clearEntries()
+  if (store.user.entries === '') {
+    $('#content-message').text('There is nothing to clear!')
+  } else {
+    $('#content-message').text('Entries Cleared!')
+  }
+  store.user.entries = ''
 }
 
 // entries event listeners

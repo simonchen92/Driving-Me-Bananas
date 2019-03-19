@@ -1,7 +1,4 @@
 {{#each entries as |entry|}}
-  {{log entry}}
-
-  <!-- <section id="entry-{{entry.id}}" data-id="{{entry.id}}" class="col-6 entry"> -->
 
     <section id="entry-{{entry.id}}" data-id="{{entry.id}}" class="entry-item bg-dark entry m-5 p-3 text-light">
     <h4>
@@ -23,17 +20,13 @@
       {{/if}}
     </p>
 
-    <!-- <form class="update-form d-flex flex-column justify-content-center"> -->
       <form class="update-form">
       <input type="number" name="entry[id]" class="d-none" value="{{entry.id}}">
-      <!-- <input class="form-control overflow-hidden align-self-center d-flex w-100 my-2" name="entry[title]" type="text" placeholder="Enter New Title"> -->
       <input class="form-control my-2" name="entry[title]" type="text" placeholder="Enter New Title">
-      <!-- <textarea class="form-control overflow-hidden align-self-center d-flex w-100 my-2" name="entry[description]" type="text" placeholder="Update Description"></textarea> -->
       <textarea class="form-control my-2" name="entry[description]" type="text" placeholder="Update Description"></textarea>
       <input type="submit"class="btn btn-primary update entry-button my-2" value="Update">
     </form>
 
-    <!-- <button class="btn btn-danger delete align-self-center w-100 my-2">Delete</button> -->
     <button class="btn btn-danger delete entry-button my-2">Delete</button>
 
 
