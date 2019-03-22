@@ -91,6 +91,7 @@ const signOutSuccess = () => {
   $('#sign-in-form').fadeOut('slow')
   $('#change-password-form').fadeOut('slow')
   $('#user-message').empty()
+  $('#user-message').show()
   $('#content-message').empty()
   $('#content').empty()
   $('.journal-entries').hide()
@@ -98,7 +99,6 @@ const signOutSuccess = () => {
   $('#get-entries').show()
   // show form
   $('#sign-in-form').show()
-  setTimeout(() => $('#user-message').fadeOut().empty())
 }
 
 const signOutFailure = () => {
